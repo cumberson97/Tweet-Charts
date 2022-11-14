@@ -10,36 +10,29 @@ function chart(){
                 data={[
                     {  
                         type:"scatter",
-                        x: barX,
-                        y: barY
+                        x: [date1,date2],
+                        y: [pos1,pos2]
                     },
                     {
-                        type:"bar",
-                        x: barX,
-                        y: menY,
+                        type:"scatter",
+                        x: [date1,date2],
+                        y: [neg1,neg2],
                         xaxis: 'x2',
                         yaxis: 'y2'
                     },
                     {
                         type:"scatter",
-                        x: barX,
-                        y: sentiY,
+                        x: [date1,date2],
+                        y: [neu1,neu2],
                         xaxis: 'x3',
                         yaxis: 'y3'
-                    },
-                    {
-                        type:"bar",
-                        x: sentimentsN,
-                        y: sentimentCount,
-                        xaxis: 'x4',
-                        yaxis: 'y4'
                     }
             
 
 
                 ]}
                 layout ={{grid: {rows: 2, columns: 2, pattern: 'independent',ygap:.35},height:1050,width:1100,annotations:[{
-                    text: "Number Of Followers",
+                    text: "Positive",
                       font: {
                       size: 16,
                        color: 'black',
@@ -51,7 +44,7 @@ function chart(){
                     xref: 'paper',
                     yref: 'paper'
                  },{
-                    text: "Mentions Of Tweets",
+                    text: "Negative",
                       font: {
                       size: 16,
                        color: 'black',
@@ -63,7 +56,7 @@ function chart(){
                     xref: 'paper',
                     yref: 'paper'
                  },{
-                    text: "Sentiment Subjectivity",
+                    text: "Neutral",
                       font: {
                       size: 16,
                        color: 'black',
@@ -74,19 +67,7 @@ function chart(){
                     y: .45, 
                     xref: 'paper',
                     yref: 'paper'
-                 },{
-                    text: "Sentiments Of Top 20 Tweets",
-                      font: {
-                      size: 16,
-                       color: 'black',
-                    },
-                    showarrow: false,
-                    align: 'center',
-                    x: 0.89, 
-                    y: .45, 
-                    xref: 'paper',
-                    yref: 'paper'
-                 } ]}}
+                 }]}}
             
             
             />
@@ -97,6 +78,18 @@ function chart(){
 
 
 var test =data.stats.twitter.timelineStats.timeline[0].top20TweetsByFollowers;
+
+var pos1 =data.stats.twitter.timelineStats.timeline[0].sentimentAsCategories.positiveTweets;
+var pos2 =data.stats.twitter.timelineStats.timeline[1].sentimentAsCategories.positiveTweets;
+
+var neg1 =data.stats.twitter.timelineStats.timeline[0].sentimentAsCategories.negativeTweets;
+var neg2 =data.stats.twitter.timelineStats.timeline[1].sentimentAsCategories.negativeTweets;
+
+var neu1 =data.stats.twitter.timelineStats.timeline[0].sentimentAsCategories.neutralTweets;
+var neu2 =data.stats.twitter.timelineStats.timeline[1].sentimentAsCategories.neutralTweets;
+
+var date1 =data.stats.twitter.timelineStats.timeline[0].startDate
+var date2 =data.stats.twitter.timelineStats.timeline[1].startDate
 var barX = [], barY = [];
 var menY = [];
 var sentiY = [],sentimentsN = ['NEGATIVE','POSITIVE','NEUTRAL'], sentimentCount = [0,0,0];
