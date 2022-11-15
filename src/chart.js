@@ -1,6 +1,5 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
-import data from './twitter_api_response.json'
 
 
 function chart(props){

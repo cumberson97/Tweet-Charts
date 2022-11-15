@@ -4,19 +4,8 @@ import data1 from './twitter_api_response.json'
 import data2 from './facebook_sentiment.json'
 import './App.css';
 
-
-const twitter_timeline =data1.stats.twitter.timelineStats.timeline;
-const facebook_timeline = data2.stats.facebook.timelineStats.timeline;
-
 var display=[],api_res=[data1,data2];
 
-function dateConvert(dates){
-  var val = new Date(dates);
-  var test = val.getFullYear
-  console.log (test)
-  
-  return `${val.getDay}/${val.getMonth}/${val.getFullYear}`
-}
 
 for(const data of api_res){
   if ("twitter" in data.stats){
