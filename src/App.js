@@ -71,6 +71,7 @@ function App() {
     <div className="App">
       <h1>Tweet Sentiment Charts</h1>
       <Chart values = {display[0].twitter}/>
+      <h2>Facebook Sentiment Charts</h2>
       <Chart values = {display[1].facebook}/>
     </div>
   );
