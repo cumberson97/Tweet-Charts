@@ -1,17 +1,21 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
 
-const gauge = (props) =>{
+const Gauge = ({value1},{layout}) =>{
   
     return(
         <div>
             <Plot
-                data={props.value1}
-                layout = {{ width: 600, height: 450, margin: { t: 0, b: 0 } }}
+                data={value1}
+                layout = {layout}
             />
         
         </div>
     )
 }
 
-export default gauge;
+Gauge.defaultProps = {
+    layout: { width: 300, height: 450, margin: { t: 0, b: 0 } }
+}
+
+export default Gauge;

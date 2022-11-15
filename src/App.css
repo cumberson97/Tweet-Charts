@@ -5,10 +5,12 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
+    display: flex;
     width: min-content;
     margin-left: auto;
     margin-right: auto;
-    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .App-logo {
