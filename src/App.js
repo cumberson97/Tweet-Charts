@@ -64,11 +64,12 @@ for(const data of api_res){
                   }]});
   }
 }
+var avgSen = (meanSentiment[0]+meanSentiment[1])/2
 
 var valueGuage = [
   {
     domain: { x: [0, 1], y: [0, 1] },
-    value: .3,
+    value: avgSen,
     title: { text: "Sentiment" },
     type: "indicator",
     mode: "gauge+number",
@@ -90,6 +91,8 @@ function App() {
       <Chart values = {display[0].twitter}/>
       <h2>Facebook Sentiment Charts</h2>
       <Chart values = {display[1].facebook}/>
+      <h3>Facebook Sentiment Charts</h3>
+      <Gauge value1 = {valueGuage}/>
     </div>
   );
 }
