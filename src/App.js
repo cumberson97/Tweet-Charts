@@ -1,10 +1,11 @@
 import React from 'react';
 import Chart from './chart';
+import Gauge from './components/gauge';
 import data1 from './twitter_api_response.json'
 import data2 from './facebook_sentiment.json'
 import './App.css';
 
-var display=[],api_res=[data1,data2];
+var display=[],api_res=[data1,data2],meanSentiment=[];
 
 
 for(const data of api_res){
@@ -15,6 +16,7 @@ for(const data of api_res){
         positive.push(timel.sentimentAsCategories.positiveTweets)
         negative.push(timel.sentimentAsCategories.negativeTweets)
         neutral.push(timel.sentimentAsCategories.neutralTweets)
+        meanSentiment.push(timel.meanSentiment)
         date.push(timel.startDate)
     }
 
@@ -63,7 +65,22 @@ for(const data of api_res){
   }
 }
 
-
+var valueGuage = [
+  {
+    domain: { x: [0, 1], y: [0, 1] },
+    value: .3,
+    title: { text: "Sentiment" },
+    type: "indicator",
+    mode: "gauge+number",
+    gauge: {
+      axis: { range: [-1, 1] },
+      steps: [
+        { range: [-1, .99], color: "lightgrey" },
+        { range: [0, 1], color: "gray" }
+      ],
+    }
+  }
+];
 
 
 function App() {
@@ -76,6 +93,8 @@ function App() {
     </div>
   );
 }
+
+
 
 
 export default App;

@@ -3,7 +3,7 @@ import Plot from 'react-plotly.js';
 
 
 function chart(props){
-        return(<div>
+        return(<div className='card'>
             <Plot
                 data={props.values}
                 layout ={{grid: {rows: 2, columns: 2, pattern: 'independent',ygap:.35},height:1050,width:1100,annotations:[{
