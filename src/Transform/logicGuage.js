@@ -20,25 +20,28 @@ function gaugeData(name, mean) {
     return [{
         domain: { x: [0, 1], y: [0, 1] },
         value: avg(mean),
-        title: { text: `Mean Sentiment ${name}` },
+        title: { text: `Mean Sentiment ${name}`, font: { size: 20 } },
         type: "indicator",
         mode: "gauge+number",
         steps: [{
             line: { width: 40 }
 
         }],
+        number: { font: { size: 20 } },
         gauge: {
             axis: { range: [-1, 1] },
             bar: { color: "rgba(0,0,0,0)" },
             steps: [
-                { range: [-1, -.5], color: "red" },
-                { range: [-.5, .0], color: "orange" },
-                { range: [0, .5], color: "yellow" },
-                { range: [.5, 1], color: "green" }
+                { range: [-1, -.6], color: "rgba(255, 30, 30, 0.8)" },
+                { range: [-.6, -.2], color: "rgba(252, 158, 59, 0.8)" },
+                { range: [-.2, 0], color: "rgba(252, 250, 59, 0.8)" },
+                { range: [0, .2], color: "rgba(252, 250, 59, 0.8)" },
+                { range: [.2, .6], color: "rgba(163, 242, 146, 0.8)" },
+                { range: [.6, 1], color: "rgba(64, 225, 30, 0.8)" }
             ],
             threshold: {
                 line: { color: "black", width: 4 },
-                thickness: .99,
+                thickness: .001,
                 value: avg(mean)
             }
         },
@@ -46,34 +49,37 @@ function gaugeData(name, mean) {
     }];
 }
 
-export function gaugeLayout() {
-
-    var theta = 93.5
-    var r = 0.3
-    var x_head = r * Math.cos(Math.PI / 180 * theta)
-    var y_head = r * Math.sin(Math.PI / 180 * theta)
+export function gaugeLayout(x, y) {
+    var test = [.234, .665, -.559, .618]
+    var anchor = [0, .348, -.08, .35]
+        /* var theta = 93.5
+        var r = 0.3
+        var x_head = r * Math.cos(Math.PI / 180 * theta)
+        var y_head = r * Math.sin(Math.PI / 180 * theta) */
 
     return {
         width: 548,
         height: 550,
         margin: { t: 0, b: 0 },
-        xaxis: { range: [0, 1], showgrid: false, 'zeroline': false, 'visible': false },
+        xaxis: { range: [-1, 1], showgrid: false, 'zeroline': false, 'visible': false },
         yaxis: { range: [0, 1], showgrid: false, 'zeroline': false, 'visible': false },
         showlegend: false,
         annotations: [{
-            ax: 0.5,
-            ay: 0,
+            ax: anchor[x],
+            ay: anchor[y],
             axref: 'x',
             ayref: 'y',
-            x: 0.5 + x_head,
-            y: y_head,
+            x: test[x],
+            y: test[y],
             xref: 'x',
             yref: 'y',
             showarrow: true,
             arrowhead: 0,
             arrowsize: 1,
-            arrowwidth: 4
-        }]
+            arrowwidth: 3
+        }],
+        font: { size: 15 }
+
 
     }
 }

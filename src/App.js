@@ -11,7 +11,6 @@ var layouts = subplotLayout(),gaugeLayouts = gaugeLayout();
 console.log(gaugeLayouts)
 function App() {
   return ( 
-
     <div className="App">
       <div className="div">
         <h1>Tweet Sentiment Charts</h1>
@@ -21,10 +20,10 @@ function App() {
         <h2>Mean Sentiment Gauges</h2>
         <div className='container'>
           <div className='card'>
-            <Gauge value1 = {valueGauge[0]} layout = {gaugeLayouts}/>
+            <Gauge value1 = {valueGauge[0]} layout = {gaugeLayout(2,3)}/>
           </div>
           <div className="card">
-            <Gauge value1 = {valueGauge[1]} layout = {gaugeLayouts}/>
+            <Gauge value1 = {valueGauge[1]} layout = {gaugeLayout(0,1)}/>
           </div>
         </div>
       </div>
