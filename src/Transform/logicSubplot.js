@@ -34,6 +34,9 @@ export function subplotLayout() {
             grid: { rows: 2, columns: 2, pattern: 'independent', ygap: .35 },
             height: 1050,
             width: 1100,
+            xaxis: { type: 'date', dtick: 'D1' },
+            xaxis2: { type: 'date', dtick: 'D1' },
+            xaxis3: { type: 'date', dtick: 'D1' },
             annotations: [{
                 text: "Positive",
                 font: {

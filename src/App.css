@@ -1,5 +1,16 @@
 .App {
     text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
 }
 
 .card {

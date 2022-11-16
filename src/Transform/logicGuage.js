@@ -23,14 +23,59 @@ function gaugeData(name, mean) {
         title: { text: `Mean Sentiment ${name}` },
         type: "indicator",
         mode: "gauge+number",
+        steps: [{
+            line: { width: 40 }
+
+        }],
         gauge: {
             axis: { range: [-1, 1] },
+            bar: { color: "rgba(0,0,0,0)" },
             steps: [
-                { range: [-1, .99], color: "lightgrey" },
-                { range: [0, 1], color: "gray" }
+                { range: [-1, -.5], color: "red" },
+                { range: [-.5, .0], color: "orange" },
+                { range: [0, .5], color: "yellow" },
+                { range: [.5, 1], color: "green" }
             ],
-        }
+            threshold: {
+                line: { color: "black", width: 4 },
+                thickness: .99,
+                value: avg(mean)
+            }
+        },
+
     }];
+}
+
+export function gaugeLayout() {
+
+    var theta = 93.5
+    var r = 0.3
+    var x_head = r * Math.cos(Math.PI / 180 * theta)
+    var y_head = r * Math.sin(Math.PI / 180 * theta)
+
+    return {
+        width: 548,
+        height: 550,
+        margin: { t: 0, b: 0 },
+        xaxis: { range: [0, 1], showgrid: false, 'zeroline': false, 'visible': false },
+        yaxis: { range: [0, 1], showgrid: false, 'zeroline': false, 'visible': false },
+        showlegend: false,
+        annotations: [{
+            ax: 0.5,
+            ay: 0,
+            axref: 'x',
+            ayref: 'y',
+            x: 0.5 + x_head,
+            y: y_head,
+            xref: 'x',
+            yref: 'y',
+            showarrow: true,
+            arrowhead: 0,
+            arrowsize: 1,
+            arrowwidth: 4
+        }]
+
+    }
 }
 
 
