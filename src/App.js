@@ -8,7 +8,7 @@ import './App.css';
 var display = readChartData();
 var valueGauge = readGaugeData();
 var layouts = subplotLayout(),gaugeLayouts = gaugeLayout();
-console.log(gaugeLayouts)
+
 function App() {
   return ( 
     <div className="App">
