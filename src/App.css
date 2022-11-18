@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
+.gauge {
+    padding: 12px;
+}
+
 .container {
     display: flex;
 }

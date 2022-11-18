@@ -26,6 +26,8 @@ export function mapLayout() {
 
     return {
         title: 'Follower Counts By Country',
+        width: 1100,
+        height: 550,
         geo: {
             projection: {
                 type: 'robinson'

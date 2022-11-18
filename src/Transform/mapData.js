@@ -1,4 +1,3 @@
-import link from "../linkedin_data_for.json"
 import { mapData } from "../visualization_param/map_params";
 
 
