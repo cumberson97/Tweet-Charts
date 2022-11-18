@@ -17,6 +17,7 @@ function avg(arr) {
 
 
 function gaugeData(name, mean) {
+
     return [{
         domain: { x: [0, 1], y: [0, 1] },
         value: avg(mean),
