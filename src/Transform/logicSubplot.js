@@ -4,10 +4,6 @@ import { chartData } from '../visualization_param/subplot_params';
 var display = [],
     api_res = [data1, data2]
 
-
-
-
-
 export function readChartData() {
     for (const data of api_res) {
         if ("twitter" in data.stats) {

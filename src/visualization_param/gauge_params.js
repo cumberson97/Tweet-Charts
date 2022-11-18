@@ -12,7 +12,7 @@ export function gaugeData(name, mean, H, W) {
     return {
         max: 1,
         min: -1,
-        needleHeightRatio: .85,
+        needleHeightRatio: .9,
         ringWidth: 10,
         segments: 5,
         value: avg(mean).toFixed(2),
@@ -26,7 +26,7 @@ export function gaugeData(name, mean, H, W) {
             "#7ab55c",
             "#385828"
         ],
-        needleColor: "#000080"
+        needleColor: "#303030"
     }
 
 }
