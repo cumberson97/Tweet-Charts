@@ -9,7 +9,7 @@ import link from "./linkedin_data_for.json"
 import { readMapData } from './Transform/mapData'; 
 import { mapLayout } from './visualization_param/map_params';
 import './App.css';
-var map_data = readMapData(link);
+var map_data = readMapData(link,"Country");
 var display = readChartData();
 var valueGauge = readGaugeData();
 var layouts = subplotLayout();
