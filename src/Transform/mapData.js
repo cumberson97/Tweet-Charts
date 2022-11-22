@@ -21,15 +21,15 @@ export function readMapData(api_res, type) {
         } else {
             for (const Da of timel.followers_split.followerCountsByRegion) {
 
-                if (Da.countryText) {
+                if (Da.regionText) {
                     location_code.push(Da.region)
-                    locations.push(Da.regionText)
+                    locations.push(Da.regionText.split(",")[0].replace(/Greater|Area|Metro|politan|City|Metropolitan/g, "").trim())
                     mapValues.push(Da.followerCounts.organicFollowerCount)
                 }
             }
         }
     }
-
+    console.log(locations)
     values.push(mapData(location_code, locations, mapValues, type))
     return values
 }

@@ -8,8 +8,11 @@ import { subplotLayout } from './visualization_param/subplot_params';
 import link from "./linkedin_data_for.json"
 import { readMapData } from './Transform/mapData'; 
 import { mapLayout } from './visualization_param/map_params';
+import {test} from "./Transform/test"
 import './App.css';
-var map_data = readMapData(link,"Country");
+test()
+var map_data = readMapData(link,"Region");
+var map_data2 = readMapData(link,"Region");
 var display = readChartData();
 var valueGauge = readGaugeData();
 var layouts = subplotLayout();
