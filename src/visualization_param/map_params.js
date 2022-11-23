@@ -1,3 +1,39 @@
+var scl = [
+    [0, 'rgb(5, 10, 172)'],
+    [0.35, 'rgb(40, 60, 190)'],
+    [0.5, 'rgb(70, 100, 245)'],
+    [0.6, 'rgb(90, 120, 245)'],
+    [0.7, 'rgb(106, 137, 247)'],
+    [1, 'rgb(220, 220, 220)']
+];
+export function mapDataScatterGeo(location, data, lat, lng) {
+    return [{
+        type: 'scattergeo',
+        mode: 'markers+text',
+        locationmode: "country names",
+        text: location,
+        hoverinfor: data,
+        lon: lng,
+        lat: lat,
+        marker: {
+            size: 8,
+            opacity: 0.8,
+            reversescale: true,
+            autocolorscale: false,
+            symbol: 'square',
+            line: {
+                width: 1,
+                color: 'rgb(102,102,102)'
+            },
+            colorscale: scl,
+            cmin: 0,
+            colorbar: {
+                title: 'Incoming Flights February 2011'
+            }
+        }
+    }]
+}
+
 export function mapData(location_code, location, data, type) {
     if (type.toLowerCase() === "country") {
         return [{
@@ -46,6 +82,22 @@ export function mapData(location_code, location, data, type) {
 }
 
 export function mapLayout() {
+    /*     return {
+            title: 'Most Trafficked US airports',
+            colorbar: true,
+            geo: {
+                scope: 'world',
+                projection: {
+
+                },
+                showland: true,
+                landcolor: 'rgb(250,250,250)',
+                subunitcolor: 'rgb(217,217,217)',
+                countrycolor: 'rgb(217,217,217)',
+                countrywidth: 0.5,
+                subunitwidth: 0.5
+            }
+        }; */
 
     return {
         title: 'Follower Counts By Country',

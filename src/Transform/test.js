@@ -1,14 +1,23 @@
-/* const fs = require("fs")
-const parser = require("csv-parser") */
 import * as D3 from "d3"
 
-var res = [];
+var res, t = {};
 
-export function test() {
-    res = D3.csv("C:/Users/liat1/Desktop/Projects 2022/Tweet Charts/src/worldcities.csv")
-        /* fs.createReadStream("C:/Users/liat1/Desktop/Projects 2022/Tweet Charts/src/worldcities.csv").pipe(parser({})).on("data", (data) => res.push(data)).on("end", () => {
-            //console.log(res)
-        }) */
+export async function loadRegionLocationData() {
 
-    console.log(res);
+    res = () => {
+        return D3.csv("https://raw.githubusercontent.com/cumberson97/Tweet-Charts/master/src/worldcities.csv")
+            .then((data) => {
+                t.data = data;
+            })
+    }
+
+    await res();
+    //console.log(t.data[0])
+    var map = new Map()
+    for (const value of t.data) {
+        map.set(value.city_ascii, { "lat": value.lat, "lng": value.lng })
+
+    }
+    //console.log(map)
+    return map
 }
