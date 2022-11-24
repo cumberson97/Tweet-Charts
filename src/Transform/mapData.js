@@ -9,10 +9,10 @@ async function setCoordinates(locations, mapValues, lat, lng) {
         dex, test = 0;
     const arr = [...locations];
     //console.table(locations)
-    console.log(locations.length, test)
+
     for (const loc of arr) {
         test++;
-        console.log(arr.length)
+
         if (cord.has(loc)) {
             // console.log(loc, " ", cord.get(loc).lat, cord.get(loc).lng)
             lat.push(cord.get(loc).lat)
@@ -23,14 +23,14 @@ async function setCoordinates(locations, mapValues, lat, lng) {
             dex = locations.indexOf(loc)
 
             if (dex > -1) {
-                console.log(`Removing ${loc}    ${dex}`)
+                /*  console.log(`Removing ${loc}    ${dex}`) */
                 locations.splice(dex, 1)
                 mapValues.splice(dex, 1)
             }
         }
 
     }
-    console.log(locations.length, test)
+
 
     return [locations, mapValues, lat, lng]
 

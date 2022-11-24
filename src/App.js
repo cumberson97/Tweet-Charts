@@ -1,25 +1,23 @@
 import React, { useEffect } from 'react';
 import Chart from './components/chart';
 import Gauge from './components/gauge';
-import Map from './components/map'
+import Map from './components/map';
+import Bubble from './components/bubbleChart';
 import { readGaugeData} from './Transform/logicGuage';
 import { readChartData} from './Transform/logicSubplot';
 import { subplotLayout } from './visualization_param/subplot_params';
 import link from "./linkedin_data_for.json"
 import { readMapData } from './Transform/mapData'; 
-import { mapLayout } from './visualization_param/map_params';
+import { mapLayout, mapScatterLayout } from './visualization_param/map_params';
+import { readBubbleChartData } from './Transform/bubbleChart';
+import { layoutBubbleChart } from './visualization_param/bubble_params';
 import './App.css';
 import { useState } from 'react';
 
 var display = readChartData();
 var valueGauge = readGaugeData();
 var layouts = subplotLayout();
-
-const addMapdata=async()=>{
-    
-}
-
-
+var bubble_Chart = readBubbleChartData();
 
 
 function App() {
@@ -57,6 +55,10 @@ function App() {
         <div className='card'>
         <Map values = {map_data[0]} layout = {mapLayout()}/> 
         </div>
+        <div className='card'>
+        <Map values = {map_data2[0]} layout = {mapScatterLayout()}/> 
+        </div>
+        <Bubble values = {bubble_Chart[1]} layout = {layoutBubbleChart()} />
       </div>
     </div>
   );

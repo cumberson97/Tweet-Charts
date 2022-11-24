@@ -6,10 +6,10 @@ var scl = [
     [0.7, 'rgb(106, 137, 247)'],
     [1, 'rgb(220, 220, 220)']
 ];
-export function mapDataScatterGeo(location, data, lat, lng) {
+export function mapDataScatterGeo(location, data, lat, lng, title = "") {
     return [{
         type: 'scattergeo',
-        mode: 'markers+text',
+        mode: 'markers',
         locationmode: "country names",
         text: location,
         hoverinfor: data,
@@ -19,7 +19,7 @@ export function mapDataScatterGeo(location, data, lat, lng) {
             size: 8,
             opacity: 0.8,
             reversescale: true,
-            autocolorscale: false,
+            autocolorscale: true,
             symbol: 'square',
             line: {
                 width: 1,
@@ -28,7 +28,10 @@ export function mapDataScatterGeo(location, data, lat, lng) {
             colorscale: scl,
             cmin: 0,
             colorbar: {
-                title: 'Incoming Flights February 2011'
+                title: title
+            },
+            colorbar: {
+                thickness: 0
             }
         }
     }]
@@ -80,7 +83,30 @@ export function mapData(location_code, location, data, type) {
         }]
     }
 }
+export function mapScatterLayout() {
+    return {
+        title: '',
+        width: 1100,
+        height: 600,
+        dragmode: false,
+        scrollZoom: false,
+        colorbar: true,
+        margin: { r: 5, l: 5 },
+        geo: {
+            scope: 'world',
+            showframe: false,
+            projection: {
 
+            },
+            showland: true,
+            landcolor: 'rgb(250,250,250)',
+            subunitcolor: 'rgb(217,217,217)',
+            countrycolor: 'rgb(217,217,217)',
+            countrywidth: 0.5,
+            subunitwidth: 0.5
+        }
+    }
+}
 export function mapLayout() {
     /*     return {
             title: 'Most Trafficked US airports',
