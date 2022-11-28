@@ -13,22 +13,26 @@ import { readBubbleChartData } from './Transform/bubbleChart';
 import { layoutBubbleChart } from './visualization_param/bubble_params';
 import './App.css';
 import { useState } from 'react';
+import { readMultiPieChartData } from './Transform/pieChart';
+import { layoutMultiPieChart } from './visualization_param/piecChart_params';
 
 var display = readChartData();
 var valueGauge = readGaugeData();
 var layouts = subplotLayout();
 var bubble_Chart = readBubbleChartData();
-
+var pie_vals = readMultiPieChartData(link);
 
 function App() {
 
   const [map_data, setMap] =useState([]);
   const [map_data2, setMap2] = useState([]);
+  
 
   useEffect(()=>{
     const addmap = async () =>{
       var val = await readMapData(link,"Country");
       var val2 = await readMapData(link,"Region");
+      
       setMap(val)
       setMap2(val2)
     }
@@ -58,7 +62,12 @@ function App() {
         <div className='card'>
         <Map values = {map_data2[0]} layout = {mapScatterLayout()}/> 
         </div>
+               
+        <Chart values = {pie_vals[0]} layout = {layoutMultiPieChart()} />
+        <div className='card'>
         <Bubble values = {bubble_Chart[1]} layout = {layoutBubbleChart()} />
+        </div>
+        
       </div>
     </div>
   );

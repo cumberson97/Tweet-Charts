@@ -8045,7 +8045,7 @@
                                 "organicFollowerCount": 10,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Greater New York City Area"
+                            "regionText": "Greater New York City Area, United States"
                         }, {
                             "region": "urn:li:region:5616",
                             "followerCounts": {
@@ -8115,14 +8115,14 @@
                                 "organicFollowerCount": 5,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "San Francisco Bay Area"
+                            "regionText": "San Francisco Area, United States"
                         }, {
                             "region": "urn:li:region:97",
                             "followerCounts": {
                                 "organicFollowerCount": 4,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Washington D.C. Metro Area"
+                            "regionText": "Washington Metro Area, United States"
                         }, {
                             "region": "urn:li:region:4582",
                             "followerCounts": {
@@ -8241,14 +8241,14 @@
                                 "organicFollowerCount": 3,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Greater Denver Area"
+                            "regionText": "Greater Denver Area, United States"
                         }, {
                             "region": "urn:li:region:4876",
                             "followerCounts": {
                                 "organicFollowerCount": 3,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Toronto, Canada Area"
+                            "regionText": "Toronto, Canada"
                         }, {
                             "region": "urn:li:region:7242",
                             "followerCounts": {
@@ -8276,7 +8276,7 @@
                                 "organicFollowerCount": 3,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Greater Atlanta Area"
+                            "regionText": "Greater Atlanta Area, United States"
                         }, {
                             "region": "urn:li:region:6560",
                             "followerCounts": {
@@ -8325,7 +8325,7 @@
                                 "organicFollowerCount": 2,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Orlando, Florida Area"
+                            "regionText": "Orlando, United States"
                         }, {
                             "region": "urn:li:region:4603",
                             "followerCounts": {
@@ -8339,7 +8339,7 @@
                                 "organicFollowerCount": 2,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Cincinnati, Ohio Area"
+                            "regionText": "Cincinnati, United States"
                         }, {
                             "region": "urn:li:region:7583",
                             "followerCounts": {
@@ -8381,7 +8381,7 @@
                                 "organicFollowerCount": 2,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Raleigh-Durham, North Carolina Area"
+                            "regionText": "Raleigh, United States"
                         }, {
                             "region": "urn:li:region:4632",
                             "followerCounts": {
@@ -8402,7 +8402,7 @@
                                 "organicFollowerCount": 2,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Greater Los Angeles Area"
+                            "regionText": "Greater Los Angeles Area, United States"
                         }, {
                             "region": "urn:li:region:4648",
                             "followerCounts": {
@@ -8514,28 +8514,28 @@
                                 "organicFollowerCount": 2,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Phoenix, Arizona Area"
+                            "regionText": "Phoenix, United States"
                         }, {
                             "region": "urn:li:region:5924",
                             "followerCounts": {
                                 "organicFollowerCount": 2,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Quer\u00e9taro Area, Mexico"
+                            "regionText": "Queretaro Area, Mexico"
                         }, {
                             "region": "urn:li:region:7684",
                             "followerCounts": {
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Hamamatsu, Shizuoka, Japan"
+                            "regionText": "Hamamatsu , Japan"
                         }, {
                             "region": "urn:li:region:512",
                             "followerCounts": {
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Greater Minneapolis-St. Paul Area"
+                            "regionText": "Greater Minneapolis Area, United States"
                         }, {
                             "region": "urn:li:region:7210",
                             "followerCounts": {
@@ -8556,14 +8556,14 @@
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Greater Boston Area"
+                            "regionText": "Greater Boston Area, United States"
                         }, {
                             "region": "urn:li:region:4612",
                             "followerCounts": {
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Newcastle upon Tyne, United Kingdom"
+                            "regionText": "Newcastle, United Kingdom"
                         }, {
                             "region": "urn:li:region:4614",
                             "followerCounts": {
@@ -8584,14 +8584,14 @@
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Dallas/Fort Worth Area"
+                            "regionText": "Dallas Area, United States"
                         }, {
                             "region": "urn:li:region:35",
                             "followerCounts": {
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Greater Detroit Area"
+                            "regionText": "Greater Detroit Area, United States"
                         }, {
                             "region": "urn:li:region:9250",
                             "followerCounts": {
@@ -8612,7 +8612,7 @@
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Charleston, West Virginia Area"
+                            "regionText": "Charleston, United States"
                         }, {
                             "region": "urn:li:region:8850",
                             "followerCounts": {
@@ -8633,14 +8633,14 @@
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Warsaw, Masovian District, Poland"
+                            "regionText": "Warsaw, Poland"
                         }, {
                             "region": "urn:li:region:152",
                             "followerCounts": {
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Charlotte, North Carolina Area"
+                            "regionText": "Charlotte, United States"
                         }, {
                             "region": "urn:li:region:4644",
                             "followerCounts": {
@@ -8654,7 +8654,7 @@
                                 "organicFollowerCount": 1,
                                 "paidFollowerCount": 0
                             },
-                            "regionText": "Orange County, California Area"
+                            "regionText": "Orange County, United States"
                         }, {
                             "region": "urn:li:region:4649",
                             "followerCounts": {

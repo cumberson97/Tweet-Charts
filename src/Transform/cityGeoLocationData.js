@@ -13,11 +13,17 @@ export async function loadRegionLocationData() {
 
     await res();
     //console.log(t.data[0])
-    var map = new Map()
+    var map = new Map(),
+        region;
     for (const value of t.data) {
-        map.set(value.city_ascii, { "lat": value.lat, "lng": value.lng })
+        if (map.has(value.country)) {
+            map.get(value.country).set(value.city_ascii, { "lat": value.lat, "lng": value.lng })
+        } else {
+            map.set(value.country, new Map())
+            map.get(value.country).set(value.city_ascii, { "lat": value.lat, "lng": value.lng })
+        }
 
     }
-    //console.log(map)
+    console.log(map)
     return map
 }

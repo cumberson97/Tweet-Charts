@@ -4,7 +4,7 @@ var scl = [
     [0.5, 'rgb(70, 100, 245)'],
     [0.6, 'rgb(90, 120, 245)'],
     [0.7, 'rgb(106, 137, 247)'],
-    [1, 'rgb(220, 220, 220)']
+    [1, 'rgba(185, 216, 255, 0.8)']
 ];
 export function mapDataScatterGeo(location, data, lat, lng, title = "") {
     return [{
@@ -19,20 +19,19 @@ export function mapDataScatterGeo(location, data, lat, lng, title = "") {
             size: 8,
             opacity: 0.8,
             reversescale: true,
-            autocolorscale: true,
-            symbol: 'square',
+            autocolorscale: false,
+            symbol: 'circle',
             line: {
                 width: 1,
                 color: 'rgb(102,102,102)'
             },
             colorscale: scl,
             cmin: 0,
+            color: data,
             colorbar: {
-                title: title
+                title: title,
+                thickness: 5
             },
-            colorbar: {
-                thickness: 0
-            }
         }
     }]
 }
@@ -85,23 +84,24 @@ export function mapData(location_code, location, data, type) {
 }
 export function mapScatterLayout() {
     return {
-        title: '',
+        title: 'Region Map',
         width: 1100,
-        height: 600,
+        height: 700,
         dragmode: false,
         scrollZoom: false,
         colorbar: true,
-        margin: { r: 5, l: 5 },
+        margin: { r: 0, l: 1 },
         geo: {
             scope: 'world',
             showframe: false,
+            showcountries: true,
             projection: {
 
             },
             showland: true,
-            landcolor: 'rgb(250,250,250)',
+            landcolor: 'rgba(252, 255, 252, 0.8)',
             subunitcolor: 'rgb(217,217,217)',
-            countrycolor: 'rgb(217,217,217)',
+            countrycolor: 'rgba(0, 0, 0, 0.8)',
             countrywidth: 0.5,
             subunitwidth: 0.5
         }
@@ -128,17 +128,18 @@ export function mapLayout() {
     return {
         title: 'Follower Counts By Country',
         width: 1100,
-        height: 600,
+        height: 700,
         dragmode: false,
         scrollZoom: false,
-        margin: { r: 5, l: 5 },
+        margin: { r: 0, l: 1 },
         geo: {
             showframe: false,
+            showcountries: true,
             projection: {
 
             },
             showland: true,
-            landcolor: 'rgba(222, 236, 255, 0.39)',
+            landcolor: 'rgba(236, 243, 253, 0.8)',
 
         }
     };

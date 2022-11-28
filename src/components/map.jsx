@@ -8,8 +8,7 @@ const Map = (props) => {
                 data={props.values}
                 layout = {props.layout}
             />
-            );
-    
+            );    
 }
 
 export default Map;
