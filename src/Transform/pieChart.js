@@ -24,7 +24,7 @@ export function readMultiPieChartData(api_res) {
                 valueText.push(Da.senioritiesText)
             }
         }
-        values_arr.push(pieChartData(followerCount, valueText, "Follower Count By Seniority", position))
+        values_arr.push(pieChartData(followerCount, valueText, "By Seniority", position))
         followerCount = []
         valueText = []
         for (const Da of timel.followers_split.followerCountsByIndustry) {
@@ -35,7 +35,7 @@ export function readMultiPieChartData(api_res) {
             }
         }
         position[0]++;
-        values_arr.push(pieChartData(followerCount, valueText, "Follower Count By Industry", position))
+        values_arr.push(pieChartData(followerCount, valueText, "By Industry", position))
 
         followerCount = []
         valueText = []
@@ -48,7 +48,7 @@ export function readMultiPieChartData(api_res) {
         }
         position[1]++
             position[0]--
-            values_arr.push(pieChartData(followerCount, valueText, "Follower Count By Staff Count Range", position))
+            values_arr.push(pieChartData(followerCount, valueText, "By Staff Count Range", position))
         followerCount = []
         valueText = []
         for (const Da of timel.followers_split.followerCountsByFunction) {
@@ -59,7 +59,7 @@ export function readMultiPieChartData(api_res) {
             }
         }
         position[0]++
-            values_arr.push(pieChartData(followerCount, valueText, "Follower Count By Function", position))
+            values_arr.push(pieChartData(followerCount, valueText, "By Function", position))
         values.push(values_arr)
     }
 

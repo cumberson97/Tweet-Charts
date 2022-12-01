@@ -62,7 +62,7 @@ function App() {
         <div className='card'>
         <Map values = {map_data2[0]} layout = {mapScatterLayout()}/> 
         </div>
-               
+        <h3>Follower Count By Various Categories</h3>       
         <Chart values = {pie_vals[0]} layout = {layoutMultiPieChart()} />
         <div className='card'>
         <Bubble values = {bubble_Chart[1]} layout = {layoutBubbleChart()} />

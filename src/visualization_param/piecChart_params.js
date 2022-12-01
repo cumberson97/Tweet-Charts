@@ -4,6 +4,7 @@ export function pieChartData(followerCount, nameText, title = '', position) {
         labels: nameText,
         type: 'pie',
         name: title,
+        text: title,
         marker: {
 
         },
