@@ -2,7 +2,8 @@ import { mapData, mapDataScatterGeo } from "../visualization_param/map_params";
 import { loadRegionLocationData } from "./cityGeoLocationData";
 
 
-
+// Data related to the regional and country map is read here
+// This data is then sent to the relevant data function that formats them into the object format to be used by plotly
 
 async function setCoordinates(locations, mapValues, lat, lng, country) {
     var cord = await loadRegionLocationData(),

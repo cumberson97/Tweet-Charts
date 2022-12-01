@@ -1,4 +1,9 @@
 import { pieChartData } from "../visualization_param/piecChart_params";
+
+// Data related to the pieChart is read here
+// This data is then sent to the relevant data function that formats them into the object format to be used by plotly
+
+
 export function readMultiPieChartData(api_res) {
     var followerCount = [],
         valueText = [],

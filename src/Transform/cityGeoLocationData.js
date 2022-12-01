@@ -1,7 +1,9 @@
 import * as D3 from "d3"
 
 var res, t = {};
-
+// this function fetches the Csv data with the region geo data from github
+// data is loaded in to a map which use the country as key which refers to another map with the regions in that country as keys
+// each regions latitude and longitude is stored in this map
 export async function loadRegionLocationData() {
 
     res = () => {
