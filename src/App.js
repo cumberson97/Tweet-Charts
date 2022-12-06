@@ -14,7 +14,7 @@ import { layoutBubbleChart } from './visualization_param/bubble_params';
 import './App.css';
 import { useState } from 'react';
 import { readMultiPieChartData } from './Transform/pieChart';
-import { layoutMultiPieChart } from './visualization_param/piecChart_params';
+import { layoutMultiPieChart ,config} from './visualization_param/piecChart_params';
 
 var display = readChartData();
 var valueGauge = readGaugeData();
@@ -44,9 +44,9 @@ function App() {
     <div className="App">
       <div className="div">
         <h1>Tweet Sentiment Charts</h1>
-        <Chart values = {display[0].twitter} layout = {layouts.layout}/>
+        <Chart values = {display[0].twitter} layout = {layouts.layout}  config = {config()}/>
         <h2>Facebook Sentiment Charts</h2>
-        <Chart values = {display[1].facebook} layout = {layouts.layout} />
+        <Chart values = {display[1].facebook} layout = {layouts.layout}  config = {config()} />
         <h2>Mean Sentiment Gauges</h2>
         <div className='container'>
           <div className='card'>
@@ -57,15 +57,16 @@ function App() {
           </div>
         </div>
         <div className='card'>
-        <Map values = {map_data[0]} layout = {mapLayout()}/> 
+        <Map values = {map_data[0]} layout = {mapLayout()}  config = {config()}/> 
         </div>
         <div className='card'>
-        <Map values = {map_data2[0]} layout = {mapScatterLayout()}/> 
+        <Map values = {map_data2[0]} layout = {mapScatterLayout()}  config = {config()}/> 
         </div>
         <h3>Follower Count By Various Categories</h3>       
-        <Chart values = {pie_vals[0]} layout = {layoutMultiPieChart()} />
+        <Chart values = {pie_vals[0]} layout = {layoutMultiPieChart()}  config = {config()} />
+        <h4>Sentiment Bubble Chart</h4> 
         <div className='card'>
-        <Bubble values = {bubble_Chart[1]} layout = {layoutBubbleChart()} />
+        <Bubble values = {bubble_Chart[1]} layout = {layoutBubbleChart()} config = {config()} />
         </div>
         
       </div>

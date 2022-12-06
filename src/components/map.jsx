@@ -7,6 +7,7 @@ const Map = (props) => {
             <Plot
                 data={props.values}
                 layout = {props.layout}
+                config = {props.config}
             />
             );    
 }
