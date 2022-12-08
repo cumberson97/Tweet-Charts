@@ -3,6 +3,7 @@ import Chart from './components/chart';
 import Gauge from './components/gauge';
 import Map from './components/map';
 import Bubble from './components/bubbleChart';
+import WordCloud from './components/worldCloud'
 import { readGaugeData} from './Transform/logicGuage';
 import { readChartData} from './Transform/logicSubplot';
 import { subplotLayout } from './visualization_param/subplot_params';
@@ -15,7 +16,9 @@ import './App.css';
 import { useState } from 'react';
 import { readMultiPieChartData } from './Transform/pieChart';
 import { layoutMultiPieChart ,config} from './visualization_param/piecChart_params';
+import { worldCloudData } from './Transform/wordCloudData';
 
+var wordCloudValues = worldCloudData();
 var display = readChartData();
 var valueGauge = readGaugeData();
 var layouts = subplotLayout();
@@ -68,7 +71,9 @@ function App() {
         <div className='card'>
         <Bubble values = {bubble_Chart[1]} layout = {layoutBubbleChart()} config = {config()} />
         </div>
-        
+        <div className='card'>
+        <WordCloud values = {wordCloudValues} />
+        </div>
       </div>
     </div>
   );
