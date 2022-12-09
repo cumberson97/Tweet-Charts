@@ -73,6 +73,7 @@ function App() {
         </div>
         <div className='card'>
         <WordCloud values = {wordCloudValues} />
+      
         </div>
       </div>
     </div>
