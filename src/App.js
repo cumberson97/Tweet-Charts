@@ -17,6 +17,7 @@ import { useState } from 'react';
 import { readMultiPieChartData } from './Transform/pieChart';
 import { layoutMultiPieChart ,config} from './visualization_param/piecChart_params';
 import { worldCloudData } from './Transform/wordCloudData';
+import { barChartLayout } from './visualization_param/barChart_params';
 
 var wordCloudValues = worldCloudData();
 var display = readChartData();
@@ -66,13 +67,17 @@ function App() {
         <Map values = {map_data2[0]} layout = {mapScatterLayout()}  config = {config()}/> 
         </div>
         <h3>Follower Count By Various Categories</h3>       
-        <Chart values = {pie_vals[0]} layout = {layoutMultiPieChart()}  config = {config()} />
+        <Chart values = {pie_vals}  layout = {barChartLayout()}    config = {config()} />
         <h4>Sentiment Bubble Chart</h4> 
         <div className='card'>
         <Bubble values = {bubble_Chart[1]} layout = {layoutBubbleChart()} config = {config()} />
         </div>
         <div className='card'>
-        <WordCloud values = {wordCloudValues} />
+        <WordCloud values = {wordCloudValues[1]} />
+      
+        </div>
+        <div className='card'>
+        <WordCloud values = {wordCloudValues[0]} />
       
         </div>
       </div>

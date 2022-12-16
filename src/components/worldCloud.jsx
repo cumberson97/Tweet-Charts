@@ -4,14 +4,14 @@ import * as d3 from "d3";
 import cloud from "d3-cloud";
 
 var fontFamily = "sans-serif";
-  var fontScale = 15;
-  var padding = 0;
+  var fontScale = 13;
+  var padding = 2;
   var height = 550;
   var width = 600;
   const rotate = () => 0;
 
 
-function testCloud(values){
+export function testCloud(values){
     const svg = d3
     .select("#word-cloud-div")
     .append("svg")

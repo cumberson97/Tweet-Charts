@@ -1,3 +1,4 @@
+import { barchartData } from "../visualization_param/barChart_params";
 import { pieChartData } from "../visualization_param/piecChart_params";
 
 // Data related to the pieChart is read here
@@ -11,12 +12,14 @@ export function readMultiPieChartData(api_res) {
         c = 0,
         position = [r, c],
         values_arr = [],
+        bar_values = [],
         values = [];
 
 
     const _timeline = api_res.stats.linkedin.timelineStats.organisationFollowersLifetime
     for (const timel of _timeline) {
         values_arr = []
+        bar_values = []
         for (const Da of timel.followers_split.followerCountsBySeniority) {
 
             if (Da.senioritiesText) {
@@ -25,6 +28,7 @@ export function readMultiPieChartData(api_res) {
             }
         }
         values_arr.push(pieChartData(followerCount, valueText, "By Seniority", position))
+        bar_values.push(barchartData(followerCount, valueText))
         followerCount = []
         valueText = []
         for (const Da of timel.followers_split.followerCountsByIndustry) {
@@ -63,5 +67,5 @@ export function readMultiPieChartData(api_res) {
         values.push(values_arr)
     }
 
-    return values
+    return bar_values
 }
