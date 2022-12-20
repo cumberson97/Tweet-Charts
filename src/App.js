@@ -43,7 +43,7 @@ function App() {
     addmap();
   },[])
 
-
+  
   return ( 
     <div className="App">
       <div className="div">
@@ -72,13 +72,22 @@ function App() {
         <div className='card'>
         <Bubble values = {bubble_Chart[1]} layout = {layoutBubbleChart()} config = {config()} />
         </div>
-        <div className='card'>
-        <WordCloud values = {wordCloudValues[1]} />
-      
-        </div>
-        <div className='card'>
-        <WordCloud values = {wordCloudValues[0]} />
-      
+        <div className='container'>
+          <div className='card'>
+          <h1>Positive Sentiment</h1>
+          <WordCloud values = {wordCloudValues[0]}fontScale = {10} />
+        
+          </div>
+          <div className='card'>
+          <h1>Negative Sentiment</h1>
+          <WordCloud values = {wordCloudValues[1] } fontScale = {10}/>
+        
+          </div>
+          <div className='card'>
+          <h1>Neutral Sentiment</h1>
+          <WordCloud values = {wordCloudValues[2]} fontScale = {10}/>
+        
+          </div>
         </div>
       </div>
     </div>

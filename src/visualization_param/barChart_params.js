@@ -8,7 +8,7 @@ export function barchartData(x, y) {
         print_grid: false,
         orientation: 'h',
         hoverinfo: 'text',
-        textposition: 'auto',
+        textposition: 'outside',
         //
         marker: {
             color: 'rgba(55,128,191,0.6)',
@@ -28,6 +28,7 @@ export function barChartLayout() {
         },
         yaxis: {
             ticklabelposition: "top",
+            autorange: "reversed",
             'side': '',
             anchor: 'right'
         },
