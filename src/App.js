@@ -24,7 +24,7 @@ var display = readChartData();
 var valueGauge = readGaugeData();
 var layouts = subplotLayout();
 var bubble_Chart = readBubbleChartData();
-var pie_vals = readMultiPieChartData(link);
+var bar_vals = readMultiPieChartData(link);
 
 function App() {
 
@@ -67,7 +67,8 @@ function App() {
         <Map values = {map_data2[0]} layout = {mapScatterLayout()}  config = {config()}/> 
         </div>
         <h3>Follower Count By Various Categories</h3>       
-        <Chart values = {pie_vals}  layout = {barChartLayout()}    config = {config()} />
+        <Chart values = {bar_vals[0]}  layout = {barChartLayout()}    config = {config()} />
+        <Chart values = {bar_vals[2]}  layout = {barChartLayout()}    config = {config()} />
         <h4>Sentiment Bubble Chart</h4> 
         <div className='card'>
         <Bubble values = {bubble_Chart[1]} layout = {layoutBubbleChart()} config = {config()} />
